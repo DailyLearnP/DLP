@@ -1,196 +1,261 @@
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?orkqwr');
-  src:  url('fonts/icomoon.eot?orkqwr#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?orkqwr') format('truetype'),
-    url('fonts/icomoon.woff?orkqwr') format('woff'),
-    url('fonts/icomoon.svg?orkqwr#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+/*
+ * Documentation specific stylesheet
+ */
+.content-wrapper p {
+  padding: 0 10px;
+  font-size: 16px;
+  position: relative;
+  z-index: 30;
+}
+.bring-up {
+  position: relative;
+  z-index: 30;
+}
+.nth-2-center > tbody > tr > td:last-of-type {
+  text-align: center!important;
+}
+.content {
+  font-size: 16px;
+  z-index: 500;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#components > h3 {
+  font-size: 25px;
+  color: #000;
 }
 
+#components > h4 {
+  font-size: 20px;
+  color: #000;
+}
+ul {
+  margin-bottom: 20px;
+}
+.page-header {
+  /*border-bottom: 1px solid #ddd;        */
+  margin: 20px 0 10px 0!important;
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+}
+.page-header span,
+.page-header a {
+  z-index: 5;
+  display: block;
+  background-color: #ecf0f5;
+  color: #000;
+}
+.page-header span::before,
+.page-header a::before {
+  content: '#';
+  font-size: 25px;
+  margin-right: 10px;
+  color: #3c8dbc;
+}
+.page-header:before,
+#components > h3:before {
+  display: block;
+  content: " ";
+  margin-top: -60px;
+  height: 60px;
+  visibility: hidden;
+  z-index: -10;
+}
 
+.lead {
+  font-size: 18px;
+  font-weight: 400;
+}
+.eg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  background: #d2d6de;
+  padding: 5px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom: 1px solid #d2d6dc;
+  border-right: 1px solid #d2d6dc;
+}
+.eg + * {
+  margin-top: 30px;
+}
+.content {
+  padding: 10px 25px;
+}
+.hierarchy {
+  background: #333;
+  color: #fff;
+}
+.plugins-list li {
+  width: 50%;
+  float: left;
+}
+pre {
+  border: none;
+}
 
+.sidebar {
+  margin-top: 0;
+  padding-top: 0!important;
+}
+.box .main-header {
+  z-index: 1000;
+  position: relative;
+}
+.treeview .nav li a:hover,
+.treeview .nav li a:active {
+  background: transparent;
+}
+p {
+  padding: 0!important;
+}
+/* Hemisu Light */
+/* Original theme - http://noahfrederick.com/vim-color-scheme-hemisu/ */
+pre.prettyprint {
+  background: white;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  border: 1px solid #dedede!important;
+  padding: 10px;
+  max-height: 300px;
+  width: auto;
+  overflow: auto!important;
+}
+pre.prettyprint > code {
+  width: auto;
+  overflow: auto!important;
+}
 
+.pln {
+  color: #111111;
+}
 
+@media screen {
+  .str {
+    color: #739200;
+  }
 
+  .kwd {
+    color: #739200;
+  }
 
+  .com {
+    color: #999999;
+  }
 
+  .typ {
+    color: #ff0055;
+  }
 
+  .lit {
+    color: #538192;
+  }
 
+  .pun {
+    color: #111111;
+  }
 
+  .opn {
+    color: #111111;
+  }
 
+  .clo {
+    color: #111111;
+  }
 
+  .tag {
+    color: #111111;
+  }
 
+  .atn {
+    color: #739200;
+  }
 
-.icon-right-quotation-mark:before {
-  content: "\e900";
+  .atv {
+    color: #ff0055;
+  }
+
+  .dec {
+    color: #111111;
+  }
+
+  .var {
+    color: #111111;
+  }
+
+  .fun {
+    color: #538192;
+  }
 }
-.icon-down-arrow:before {
-  content: "\e901";
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  .lit {
+    color: #004444;
+  }
+
+  .pun, .opn, .clo {
+    color: #444400;
+  }
+
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .atn {
+    color: #440044;
+  }
+
+  .atv {
+    color: #006600;
+  }
 }
-.icon-checked:before {
-  content: "\e902";
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.icon-pin:before {
-  content: "\e903";
+
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
 }
-.icon-letter:before {
-  content: "\e904";
-}
-.icon-plus:before {
-  content: "\e905";
-}
-.icon-phone-call:before {
-  content: "\e906";
-}
-.icon-envelope:before {
-  content: "\e907";
-}
-.icon-clock:before {
-  content: "\e908";
-}
-.icon-right-arrow .path1:before {
-  content: "\e909";
-  color: rgb(0, 150, 136);
-}
-.icon-right-arrow .path2:before {
-  content: "\e90a";
-  margin-left: -1em;
-  color: rgb(0, 150, 136);
-}
-.icon-right-arrow .path3:before {
-  content: "\e90b";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-right-arrow .path4:before {
-  content: "\e90c";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-left:before {
-  content: "\e90d";
-}
-.icon-right-arrow-angle:before {
-  content: "\e90e";
-}
-.icon-user:before {
-  content: "\e90f";
-}
-.icon-right:before {
-  content: "\e910";
-}
-.icon-left-arrow:before {
-  content: "\e911";
-}
-.icon-left-arrow-1 .path1:before {
-  content: "\e912";
-  color: rgb(0, 150, 136);
-}
-.icon-left-arrow-1 .path2:before {
-  content: "\e913";
-  margin-left: -1em;
-  color: rgb(0, 150, 136);
-}
-.icon-left-arrow-1 .path3:before {
-  content: "\e914";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-left-arrow-1 .path4:before {
-  content: "\e915";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
-}
-.icon-phone-call-1:before {
-  content: "\e916";
-}
-.icon-message:before {
-  content: "\e917";
-}
-.icon-shopping-cart:before {
-  content: "\e918";
-}
-.icon-lamp:before {
-  content: "\e919";
-}
-.icon-human-resources:before {
-  content: "\e91a";
-}
-.icon-empowerment:before {
-  content: "\e91b";
-}
-.icon-human-resources-1:before {
-  content: "\e91c";
-}
-.icon-recruitment:before {
-  content: "\e91d";
-}
-.icon-relationship:before {
-  content: "\e91e";
-}
-.icon-confirmation:before {
-  content: "\e91f";
-}
-.icon-online-course:before {
-  content: "\e920";
-}
-.icon-paper-plane:before {
-  content: "\e921";
-}
-.icon-chat:before {
-  content: "\e922";
-}
-.icon-message-1:before {
-  content: "\e923";
-}
-.icon-creativity:before {
-  content: "\e924";
-}
-.icon-needs:before {
-  content: "\e925";
-}
-.icon-photo-camera:before {
-  content: "\e926";
-}
-.icon-target:before {
-  content: "\e927";
-}
-.icon-desk:before {
-  content: "\e928";
-}
-.icon-professor:before {
-  content: "\e929";
-}
-.icon-knowledge:before {
-  content: "\e92a";
-}
-.icon-teacher:before {
-  content: "\e92b";
-}
-.icon-student:before {
-  content: "\e92c";
-}
-.icon-address:before {
-  content: "\e92d";
-}
-.icon-play:before {
-  content: "\e92e";
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
 }
